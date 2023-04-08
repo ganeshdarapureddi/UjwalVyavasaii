@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Consumers.consumerpage.apps.ConsumerpageConfig',
     'Farmers.f_account.apps.FAccountConfig',
     'Consumers.c_account.apps.CAccountConfig',
     'Home.apps.HomeConfig',
