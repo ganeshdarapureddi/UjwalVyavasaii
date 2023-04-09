@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path( 'Farmers/f_account/',include('Farmers.f_account.urls')),
     path( 'Consumers/c_account/',include('Consumers.c_account.urls')),
+    path('farmregister/', include('Farmers.farmregister.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
     path('consumerpage/', include('Consumers.consumerpage.urls')),
      path('farmerpage/', include('Farmers.farmerpage.urls')),
