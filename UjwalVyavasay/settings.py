@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Farmers.f_account.apps.FAccountConfig',
+    'Farmers.f_upload.apps.FUploadConfig',
     'Consumers.c_account.apps.CAccountConfig',
     'Home.apps.HomeConfig',
     'django.contrib.admin',
