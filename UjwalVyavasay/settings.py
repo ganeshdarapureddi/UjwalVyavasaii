@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'Consumers.consumerpage.apps.ConsumerpageConfig',
     'Farmers.f_account.apps.FAccountConfig',
+    'Farmers.f_upload.apps.FUploadConfig',
     'Consumers.c_account.apps.CAccountConfig',
     'Farmers.farmregister.apps.FarmregisterConfig',
     'Consumers.consregister.apps.ConsregisterConfig',
