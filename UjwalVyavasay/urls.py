@@ -21,6 +21,7 @@ urlpatterns = [
     path( 'Farmers/f_account/',include('Farmers.f_account.urls')),
     path( 'Consumers/c_account/',include('Consumers.c_account.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
+    
     path('',include('Home.urls')),
 
 ]

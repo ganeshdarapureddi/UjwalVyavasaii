@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 
 def funroute3(request):
-    return render(request,'consregister/index1.html')
+    return render(request,'consregister/consregister11.html')
+
