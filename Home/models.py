@@ -29,7 +29,7 @@ class Upload(models.Model):
     def __str__(self):
         return self.pName
 
-class Orders(models.Model):
+class Order(models.Model):
     phone=models.ForeignKey(Register,on_delete=models.CASCADE,related_name='+')
     quant=models.FloatField(max_length=5)
     sPrc=models.FloatField(max_length=5)
