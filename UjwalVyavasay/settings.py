@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'Consumers.c_account.apps.CAccountConfig',
     'Farmers.farmregister.apps.FarmregisterConfig',
     'Consumers.consregister.apps.ConsregisterConfig',
+    'Farmers.farmorder.apps.FarmorderConfig',
     'Farmers.farmerpage.apps.FarmerpageConfig',
+    
     'Home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
