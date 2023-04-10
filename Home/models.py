@@ -8,7 +8,8 @@ class Register( models.Model ):
     adress = models.CharField(max_length=20)
     phone = models.CharField(
         max_length=10,
-        validators=[RegexValidator('^[0-9]{10}$', ('country code is not required'))])
+        validators=[RegexValidator('^[0-9]{10}$', ('country code is not required'))],
+        primary_key=True)
     pinCode = models.CharField(
         max_length=6,
         validators=[RegexValidator('^[0-9]{6}$',('Invalid postal code'))])
@@ -23,12 +24,12 @@ class Upload(models.Model):
     PImage = models.ImageField(default="default.jpg", upload_to="profile_pics")
 
 class Orders(models.Model):
-    mobile=models.ForeignKey(Register,on_delete=models.CASCADE,related_name='+')
+    phone=models.ForeignKey(Register,on_delete=models.CASCADE,related_name='+')
     quant=models.FloatField(max_length=5)
     sPrc=models.FloatField(max_length=5)
     aTime=models.DateTimeField()
-    pName=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='+')
-    pImage=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='+')
+    pName=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pName+')
+    pImage=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pImage+')
 
 
     
