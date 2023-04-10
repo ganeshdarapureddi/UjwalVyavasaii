@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator
 
 # Create your models here.
 class Register( models.Model ):
-    Name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20)
     email = models.EmailField(max_length=20)
     adress = models.CharField(max_length=20)
     phone = models.CharField(
@@ -15,6 +15,9 @@ class Register( models.Model ):
         validators=[RegexValidator('^[0-9]{6}$',('Invalid postal code'))])
     password = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
 class Upload(models.Model):
     pName=models.CharField(max_length=20)
     price=models.FloatField(max_length=5)
@@ -23,6 +26,9 @@ class Upload(models.Model):
     phone=models.ForeignKey(Register,on_delete=models.CASCADE)
     PImage = models.ImageField(default="default.jpg", upload_to="profile_pics")
 
+    def __str__(self):
+        return self.pName
+
 class Orders(models.Model):
     phone=models.ForeignKey(Register,on_delete=models.CASCADE,related_name='+')
     quant=models.FloatField(max_length=5)
@@ -30,6 +36,9 @@ class Orders(models.Model):
     aTime=models.DateTimeField()
     pName=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pName+')
     pImage=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pImage+')
+
+    def __str__(self):
+        return self.pName
 
 
     
