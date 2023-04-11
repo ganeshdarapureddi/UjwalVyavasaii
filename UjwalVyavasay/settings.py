@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Consumers.consumerpage.apps.ConsumerpageConfig',
     'Farmers.f_account.apps.FAccountConfig',
     'Farmers.f_upload.apps.FUploadConfig',
     'Consumers.c_account.apps.CAccountConfig',
@@ -39,7 +38,6 @@ INSTALLED_APPS = [
     'Consumers.consregister.apps.ConsregisterConfig',
     'Farmers.farmorder.apps.FarmorderConfig',
     'Farmers.farmerpage.apps.FarmerpageConfig',
-    
     'Home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
