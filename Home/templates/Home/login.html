@@ -1,69 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-wqu7VnERG6dA8VfWZTQtT7m62lQxu1mFAmaWc6uP13COujp6sjTJ/z8WZzgTfVDbnoJx2xuX7W+BfON18y6zgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      body {
-        background-color: rgb(132, 215, 182) ;
-      }
-      .card {
-        background-color: #5db38a;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-      }
-      .form-control {
-        border-radius: 5px;
-        border-color: #ccc;
-        font-size: 20px;
-        padding: 10px;
-      }
-      .btn-primary {
-        background-color: white;
-        border-color: #49ae72;
-        border-radius: 10px;
-        font-size: 20px;
-        padding: 7px;
-      }
-      .btn-primary:hover {
-        background-color: #269d66;
-        border-color: #269d66;
-      }
-      .center-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-    </style>
-    <title>Login</title>
-  </head>
-  <body>
-    <div class="center-box">
-      <div class="card">
-        <h1 class="text-center mb-4">Login</h1>
-        <form>
-          <div class="form-group">
-            <label for="phone">Phone number</label><br>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label><br>
-            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
-          </div><br>
-          <button type="submit" class="btn btn-primary btn-block">Login</button><br>
-          
-          don't have an account?<br>
-          
-          <button type="button" class="btn btn-primary btn-block">Farmer</button>
-          
-          <button type="button" class="btn btn-primary btn-block">Consumer</button>
-            
-        </form>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #8ba09c, #0c6b45)
+}
+
+.card{
+    margin-bottom:20px;
+    border:none;
+}
+
+.box {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #191919;
+    ;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 100px
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #939ca2;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: #0d6431
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #146f51;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+    background: #0a6530
+}
+
+.forgot {
+    text-decoration: underline
+}
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0 5px
+}
+
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998
+}
+
+.social-network a.icoTwitter:hover {
+    background-color: #33ccff
+}
+
+.social-network a.icoGoogle:hover {
+    background-color: #BD3518
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i {
+    color: #fff
+}
+
+a.socialIcon:hover,
+.socialHoverClass {
+    color: #44BCDD
+}
+
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px
+}
+
+.social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+    transform: rotate(360deg);
+    transition: all 0.2s
+}
+
+.social-circle i {
+    color: #fff;
+    transition: all 0.8s;
+    transition: all 0.8s
+}
+  </style>
+</head>
+<body>
+  <div class="container"> 
+    <div class="row"> 
+      <div class="col-md-6">
+         <div class="card"> 
+          <form onsubmit="event.preventDefault()" class="box"> <h1>Login</h1> <p class="text-muted"> Please enter your Mobile Number and password!</p>
+             <input type="text" name="" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required> 
+             <input type="password" name="" placeholder="Password" required> 
+             <a class="forgot text-muted" href="#">Forgot password?</a>
+              <input type="submit" name="" value="Login" href="#"> 
+             <p class="text-muted">Don't have an account?</p>
+             <input type="submit" name="" value="Farmer" href="#">
+             <input type="submit" name="" value="Consumer" href="#">
+             
+              
+          </form>
+        </div>
+      </div> 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-BBZbr1eJTrfN/DjKXG0Ajr+SSPcL0msZtuzEO+eKj3qosECbnsDdNLm0R9tScQHmd5NT5G5Z5rJBOxg5hCwGpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </body>
+
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+</body>
 </html>
