@@ -25,8 +25,7 @@ urlpatterns = [
     path('farmregister/', include('Farmers.farmregister.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
     path('consumerpage/', include('Consumers.consumerpage.urls')),
-    path('farmerpage/', include('Farmers.farmerpage.urls')),
-    
+     path('farmerpage/', include('Farmers.farmerpage.urls')),
+     path('consorder/', include('Consumers.consorder.urls')),
     path('',include('Home.urls')),
-
 ]

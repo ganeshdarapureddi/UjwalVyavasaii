@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'Farmers.f_account.apps.FAccountConfig',
     'Farmers.f_upload.apps.FUploadConfig',
     'Consumers.c_account.apps.CAccountConfig',
+    'Consumers.consorder.apps.ConsorderConfig',
     'Farmers.farmregister.apps.FarmregisterConfig',
     'Consumers.consregister.apps.ConsregisterConfig',
     'Farmers.farmorder.apps.FarmorderConfig',
