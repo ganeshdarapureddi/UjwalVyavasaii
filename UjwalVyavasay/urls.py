@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,7 +27,7 @@ urlpatterns = [
     path('farmregister/', include('Farmers.farmregister.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
     path('consumerpage/', include('Consumers.consumerpage.urls')),
-     path('farmerpage/', include('Farmers.farmerpage.urls')),
-     path('consorder/', include('Consumers.consorder.urls')),
+    path('farmerpage/', include('Farmers.farmerpage.urls')),
+    path('consorder/', include('Consumers.consorder.urls')),
     path('',include('Home.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

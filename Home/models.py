@@ -3,42 +3,44 @@ from django.core.validators import RegexValidator
 
 # Create your models here.
 class Register( models.Model ):
-    name = models.CharField(max_length=20)
-    email = models.EmailField(max_length=20)
-    adress = models.CharField(max_length=20)
+    name = models.CharField(max_length=30,default="")
+    email = models.EmailField(max_length=40,default="")
+    adress = models.CharField(max_length=50,default="")
     phone = models.CharField(
         max_length=10,
         validators=[RegexValidator('^[0-9]{10}$', ('country code is not required'))],
-        primary_key=True)
+        primary_key=True,default="")
     pinCode = models.CharField(
         max_length=6,
-        validators=[RegexValidator('^[0-9]{6}$',('Invalid postal code'))])
-    password = models.CharField(max_length=30)
+        validators=[RegexValidator('^[0-9]{6}$',('Invalid postal code'))],default="")
+    password = models.CharField(max_length=30,default="")
 
     def __str__(self):
         return self.name
 
 class Upload(models.Model):
-    pName=models.CharField(max_length=20)
-    price=models.FloatField(max_length=5)
-    maxQty=models.FloatField(max_length=5)
-    dTime=models.DateTimeField()
-    phone=models.ForeignKey(Register,on_delete=models.CASCADE)
-    PImage = models.ImageField(default="default.jpg", upload_to="profile_pics")
+    pName=models.CharField(max_length=30,default="")
+    price=models.FloatField(max_length=10,default="")
+    maxQty=models.FloatField(max_length=10,default="")
+    dTime=models.DateField(default="")
+    phone=models.ForeignKey(Register,on_delete=models.CASCADE,default="",related_name='phone+')
+    PImage = models.ImageField(default="", upload_to='shop/uploads')
 
     def __str__(self):
         return self.pName
 
 class Order(models.Model):
-    phone=models.ForeignKey(Register,on_delete=models.CASCADE,related_name='+')
-    quant=models.FloatField(max_length=5)
-    sPrc=models.FloatField(max_length=5)
-    aTime=models.DateTimeField()
-    pName=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pName+')
-    pImage=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pImage+')
+    id =  models.BigAutoField(primary_key=True)
+    phone=models.ForeignKey(Register,on_delete=models.CASCADE,related_name='+',default="")
+    quant=models.FloatField(max_length=10,default="")
+    sPrc=models.FloatField(max_length=10,default="")
+    aTime=models.DateField(default="")
+    pName=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pName+',default="")
+    pImage=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='pImage+',default="") #,upload_to='shop/orders'
+    dTime=models.ForeignKey(Upload,on_delete=models.CASCADE,related_name='dTime+',default="")
 
     def __str__(self):
-        return self.pName
+         return str(self.id)
 
 
     
