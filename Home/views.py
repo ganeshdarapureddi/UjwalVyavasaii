@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Contact,Register
 from django.contrib.auth.models import User
 from django.contrib.auth import login,authenticate
@@ -22,11 +21,11 @@ def login_page(request):
 
 def contact(request):
     if request.method=="POST":
-        print(request)
-        # name = request.POST.get('name', '')
-        # email = request.POST.get('email', '')
-        # phone = request.POST.get('phone', '')
-        # desc = request.POST.get('desc', '')
-        # contact = Contact(name=name, email=email, phone=phone, desc=desc)
-        # contact.save()
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        phone = request.POST.get('phone', '')
+        desc = request.POST.get('desc', '')
+        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact.save()
+        return HttpResponse("<h1>Response recorded successfully!</h1><br><a style='color: green;' href='/home'>return to home</a>")
     return render(request, 'Home/contact.html')
