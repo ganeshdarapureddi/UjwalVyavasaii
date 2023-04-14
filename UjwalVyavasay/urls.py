@@ -31,7 +31,7 @@ urlpatterns = [
     path('farmerpage/', include('Farmers.farmerpage.urls')),
     path('consorder/', include('Consumers.consorder.urls')),
     path('',include('Home.urls')),
-    path('login/farmregister/home/',include('Home.urls')),
+    path('login/consregister/',include('Consumers.consregister.urls')),
     
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

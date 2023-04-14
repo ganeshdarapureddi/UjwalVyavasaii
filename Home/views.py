@@ -1,10 +1,25 @@
 from django.shortcuts import render
-from .models import Contact
+from .models import Contact,Register
+from django.contrib.auth.models import User
+from django.contrib.auth import login,authenticate
+from django.shortcuts import redirect, render  ,HttpResponse
+from django.contrib import messages   
 
 def home_page(request):
     return render(request,'Home/index.html')
 def login_page(request):
+    if request.method=="POST":
+        name=request.POST.get('username')
+        password=request.POST.get('password')
+        print(name,password)
+        user=authenticate(request,username=name,password=password)
+        if user is not None:
+            login(request,user)
+            return HttpResponse("login successfully")
+        else:
+            return HttpResponse("check username and password")
     return render(request,'Home/login.html')
+
 def contact(request):
     if request.method=="POST":
         print(request)

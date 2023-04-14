@@ -37,46 +37,106 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
   <body class="main-layout ">
+    <header>
+      <!-- header inner -->
+      <div class="header">
+
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
+                      <div class="full">
+                          <div class="center-desk">
+                              <div class="logo">
+                                  <a href="index.html"><img src="{% static 'icon/logo1.jpg' %}" alt="#"></a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                      <div class="location_icon_bottum_tt">
+                          <ul>
+                              <li><img src="{%static  'icon/loc1.png' %} " />Lendi ,vzm</li>
+                              <li><img src="{% static 'icon/email1.png' %}" />Lendi@gmail.com</li>
+                              <li><img src="{% static 'icon/call1.png'  %}"/>+91 8688233334</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12 location_icon_bottum">
+                     <div class="row">
+                          <div class="col-md-8 ">
+                              <div class="menu-area">
+                                  <div class="limit-box">
+                                      <nav class="main-menu">
+                                          <ul class="menu-area-main">
+                                              <li class="active"> <a href="/login">Login/Register</a> </li>
+                                              <li> <a href="#about">About</a> </li>
+                                              <li><a href="#product">Products</a></li>
+                                              <li><a href="#testimonial">Testimonial</a></li>
+                                              <li><a href="#contact">Contact Us</a></li>
+
+                                          </ul>
+                                      </nav>
+                                  </div>
+                              </div>
+
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                              <form class="search">
+                                  <input class="form-control" type="text" placeholder="Search">
+                                  <button><img src="{% static 'images/search_icon.png' %}"></button>
+                              </form>
+                          </div>
+                     </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <section>
+      <div class="form" >
+        <div class="title">Ujwal Vyavasay</div>
+        <div class="subtitle">Lets start sale</div>
+        <div class="input-container ic1">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">Full name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="Phone Number" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="Phone Number" class="placeholder">Phone Number</>
+        </div>
+        <div class="input-container ic2">
+          <input id="Product name" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="product name" class="placeholder">product name</>
+        </div>
+        <div class="input-container ic2">
+          <input id="Price" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="Price" class="placeholder">price</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="Quantity" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="Quantity" class="placeholder"> Max Quantity</>
+        </div>
+        <div class="input-container ic2">
+          <input id="time" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="time" class="placeholder">Crop arrival Time</label>
+        </div>
+        <div class="input-container ic2"> <div class="upload-btn-wrapper">
+          <button class="btn">Upload a product image</button>
+          <input type="file" name="myfile" />
+        </div> </div>
+        <button type="text" class="submit"  value="upload.png" name="submit ">submit</button>
+      </div>
+    </section>
+      <!-- end header inner -->
+  </header>
  
-  <div class="form" >
-    <div class="title">Ujwal Vyavasay</div>
-    <div class="subtitle">Lets start sale</div>
-    <div class="input-container ic1">
-      <input id="firstname" class="input" type="text" placeholder=" " />
-      <div class="cut"></div>
-      <label for="firstname" class="placeholder">Full name</label>
-    </div>
-    <div class="input-container ic2">
-      <input id="Phone Number" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short"></div>
-      <label for="Phone Number" class="placeholder">Phone Number</>
-    </div>
-    <div class="input-container ic2">
-      <input id="Product name" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short"></div>
-      <label for="product name" class="placeholder">product name</>
-    </div>
-    <div class="input-container ic2">
-      <input id="Price" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short"></div>
-      <label for="Price" class="placeholder">price</label>
-    </div>
-    <div class="input-container ic2">
-      <input id="Quantity" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short"></div>
-      <label for="Quantity" class="placeholder"> Max Quantity</>
-    </div>
-    <div class="input-container ic2">
-      <input id="time" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short"></div>
-      <label for="time" class="placeholder">Crop arrival Time</label>
-    </div>
-    <div class="input-container ic2"> <div class="upload-btn-wrapper">
-      <button class="btn">Upload a product image</button>
-      <input type="file" name="myfile" />
-    </div> </div>
-    <button type="text" class="submit"  value="upload.png" name="submit ">submit</button>
-  </div>
-</section>
+
   </body>
 </html>
