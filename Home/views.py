@@ -30,3 +30,5 @@ def contact(request):
         # contact = Contact(name=name, email=email, phone=phone, desc=desc)
         # contact.save()
     return render(request, 'Home/contact.html')
+
+
