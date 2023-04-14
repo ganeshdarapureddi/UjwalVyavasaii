@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 from Home.models import Register
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render  ,HttpResponse
@@ -18,5 +19,17 @@ def funroute3(request):
         my_user=User.objects.create_user(name,email,password)
         my_user.save()
         reg =Register(name=name,email=email,adress=adress,phone=phone,pinCode=pinCode,password=password,cpassword=cpassword,pimg=pimg,cimg=cimg,fimg=fimg)
+=======
+from django.shortcuts import render
+from django.http import HttpResponse
+from Home.models import Register
+
+def funroute3(request):
+    if request.method=='POST':
+        name=request.POST.get('name',name)
+        print(request)
+        print(name)
+        reg=Register(name=name)
+>>>>>>> Stashed changes
         reg.save()
     return render(request,'farmregister/farmregister1.html')
