@@ -16,9 +16,9 @@ def login_page(request):
             login(request,user)
             ids = Register.objects.values_list('typ', flat=True).filter(name=name)
             if 'farmer' in ids:
-                return render(request, './farmerpage/')
+                return HttpResponse("<h1>Login successfully!</h1><br><a style='color: green;' href='/farmerpage'>return to Dashboard</a>")
             else :
-                return HttpResponse("not found")
+                return HttpResponse("<h1>Login successfully!</h1><br><a style='color: green;' href='/consumerpage'>return to dashboard</a>")
         else:
             return HttpResponse("check username and password")
     return render(request,'Home/login.html')
