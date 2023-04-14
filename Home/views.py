@@ -15,7 +15,12 @@ def login_page(request):
         user=authenticate(request,username=name,password=password)
         if user is not None:
             login(request,user)
-            return HttpResponse("login successfully")
+            mydata=Register.objects.filter(typ='farmer').values()
+            for i in mydata:
+                if i=='farmer':
+                    return HttpResponse("login successfully")
+            else :
+                return HttpResponse("not found")
         else:
             return HttpResponse("check username and password")
     return render(request,'Home/login.html')
