@@ -154,12 +154,11 @@ a.socialIcon:hover,
     <div class="row"> 
       <div class="col-md-6">
          <div class="card"> 
-          <form onsubmit="event.preventDefault()" class="box"> <h1>Login</h1> <p class="text-muted"> Please enter your Mobile Number and password!</p>
+          <form action="/home/" method="post" class="box"> <h1>Login</h1> <p class="text-muted"> Please enter your Mobile Number and password!</p>
             {% csrf_token %}
-             <input type="text" name="" placeholder="Phone Number" > 
-             <input type="password" name="" placeholder="Password" > 
-             
-              <input type="submit" name="" value="Login" href="#"> 
+             <input type="text" name="username" placeholder="Phone Number" > 
+             <input type="password" name="password" placeholder="Password" > 
+             <button type="submit">Login</button>
              <p class="text-muted">Don't have an account?</p>
              <input type="submit" name="" value="Farmer"  />
              <input type="submit" name="" value="Consumer"/>
