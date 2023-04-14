@@ -25,9 +25,13 @@ urlpatterns = [
     path( 'Consumers/c_account/',include('Consumers.c_account.urls')),
     path('farmorder/', include('Farmers.farmorder.urls')),
     path('farmregister/', include('Farmers.farmregister.urls')),
+    path('login/farmregister/', include('Farmers.farmregister.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
     path('consumerpage/', include('Consumers.consumerpage.urls')),
     path('farmerpage/', include('Farmers.farmerpage.urls')),
     path('consorder/', include('Consumers.consorder.urls')),
     path('',include('Home.urls')),
+    path('login/farmregister/home/',include('Home.urls')),
+    
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
