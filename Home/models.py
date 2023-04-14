@@ -15,6 +15,7 @@ class Register( models.Model ):
         validators=[RegexValidator('^[0-9]{6}$',('Invalid postal code'))],default="")
     password = models.CharField(max_length=30,default="")
     typ = models.CharField(max_length=30,default="")
+
     pimg = models.ImageField(default="", upload_to='shop/uploads')
     fimg = models.ImageField(default="", upload_to='shop/uploads')
     cimg = models.ImageField(default="", upload_to='shop/uploads')
@@ -54,4 +55,4 @@ class Contact(models.Model):
     desc = models.CharField(max_length=500, default="")
 
     def __str__(self):
-        return self.name    
+        return self.name 

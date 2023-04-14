@@ -1,4 +1,3 @@
-
 from Home.models import Register
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render  ,HttpResponse

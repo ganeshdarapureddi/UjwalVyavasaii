@@ -28,10 +28,14 @@ urlpatterns = [
     path('login/farmregister/', include('Farmers.farmregister.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
     path('consumerpage/', include('Consumers.consumerpage.urls')),
-    path('farmerpage/', include('Farmers.farmerpage.urls')),
+    path('login/farmregister/farmerpage/', include('Farmers.farmerpage.urls')),
     path('consorder/', include('Consumers.consorder.urls')),
     path('',include('Home.urls')),
-    path('login/farmregister/home/',include('Home.urls')),
+    path('contact/',include('Home.urls')),
+
+    path('login/consregister/',include('Consumers.consregister.urls')),
+   
+    
     
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
