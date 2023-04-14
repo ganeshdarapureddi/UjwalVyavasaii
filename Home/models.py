@@ -53,6 +53,5 @@ class Contact(models.Model):
     phone = models.CharField(max_length=70, default="")
     desc = models.CharField(max_length=500, default="")
 
-
     def __str__(self):
         return self.name 
