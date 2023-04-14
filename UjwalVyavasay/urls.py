@@ -20,20 +20,23 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path( 'Farmers/f_account/',include('Farmers.f_account.urls')),
-    path( 'Farmers/f_upload/',include('Farmers.f_upload.urls')),
-    path( 'Consumers/c_account/',include('Consumers.c_account.urls')),
-    path('farmorder/', include('Farmers.farmorder.urls')),
+    path( 'f_account/',include('Farmers.f_account.urls')),
+    path( 'f_upload/',include('Farmers.f_upload.urls')),
+    path( 'c_account/',include('Consumers.c_account.urls')),
+    
+    
     path('farmregister/', include('Farmers.farmregister.urls')),
-    path('login/farmregister/', include('Farmers.farmregister.urls')),
     path('consregister/', include('Consumers.consregister.urls')),
     path('consumerpage/', include('Consumers.consumerpage.urls')),
-    path('login/farmregister/farmerpage/', include('Farmers.farmerpage.urls')),
+    
+    path('farmerpage/', include('Farmers.farmerpage.urls')),
+    path('farmorder/', include('Farmers.farmorder.urls')),
+
     path('consorder/', include('Consumers.consorder.urls')),
     path('',include('Home.urls')),
-    path('contact/',include('Home.urls')),
+    
 
-    path('login/consregister/',include('Consumers.consregister.urls')),
+    path('consregister/',include('Consumers.consregister.urls')),
    
     
     
