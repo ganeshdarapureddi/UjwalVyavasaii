@@ -116,13 +116,15 @@
           <form action=" " method="POST" class="box"> {% csrf_token %}
             <h1>Login</h1> <p class="text-muted"> Please enter your username and password!</p>
              <input type="text" name="username" placeholder="enter username (registration name)" > 
-             <input type="password" name="password" placeholder="Password" > 
-             <input type="submit">
+             <input type="password" name="password" placeholder="Enter Password" > 
+             <input type="submit" value="Login">
+             
+             
 
              <p class="text-muted">Don't have an account?</p>
             
-             <button class="buttons" ><a href="/farmregister/">Farmer</a></button>
-             <button class="buttons" ><a href="/consregister/">Consumer</a></button>
+             <button class="buttons" ><a href="/farmregister/" style="color:whitesmoke">Farmer</a></button>
+             <button class="buttons" ><a href="/consregister/" style="color:whitesmoke">Consumer</a></button>
              
               
           </form>

@@ -10,15 +10,14 @@ def login_page(request):
     if request.method=="POST":
         name=request.POST.get('username')
         password=request.POST.get('password')
-        print(name,password)
         user=authenticate(request,username=name,password=password)
         if user is not None:
             login(request,user)
             ids = Register.objects.values_list('typ', flat=True).filter(name=name)
             if 'farmer' in ids:
-                return HttpResponse("<h1>Login successfully!</h1><br><a style='color: green;' href='/farmerpage'>return to Dashboard</a>")
+                return HttpResponse("<h1>Login successfully!</h1><br><a style='color: green;' href='/farmerpage/'>return to Dashboard</a>")
             else :
-                return HttpResponse("<h1>Login successfully!</h1><br><a style='color: green;' href='/consumerpage'>return to dashboard</a>")
+                return HttpResponse("<h1>Login successfully!</h1><br><a style='color: green;' href='/consumerpage/'>return to dashboard</a>")
         else:
             return HttpResponse("check username and password")
     return render(request,'Home/login.html')
