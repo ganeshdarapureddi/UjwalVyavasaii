@@ -5,11 +5,10 @@ The main aim of the project is to remove the middlemen between the farmer and th
 
 Problem Statement: 
 The farmer gets only 50–70% of what the end consumer pays for the produce. The farmer is the one who puts his blood and sweat for 4 to 6 months to grow the produce, and middlemen take a big piece of the pie just like that. This sounds unfair, and even frustrating at times.
-      	Presence of Too Many Intermediates/Middlemen results in the exploitation of both farmers and consumers with the middlemen offering lower prices to farmers and charging higher prices from the consumers.
- The farmers cannot wait for a long time, The farmers are forced to sell the produce to middlemen at low prices as they are at the risk of spoilage of produce.
+Presence of Too Many Intermediates/Middlemen results in the exploitation of both farmers and consumers with the middlemen offering lower prices to farmers and charging higher prices from the consumers.The farmers cannot wait for a long time, The farmers are forced to sell the produce to middlemen at low prices as they are at the risk of spoilage of produce.
 
 Problem Solution:
- 	We have designed a solution for this case on the basis of different analysis and surveys from the farmers and consumers. 
+We have designed a solution for this case on the basis of different analysis and surveys from the farmers and consumers. 
 In order to categorize the buyers of farmers products, we have divided them into two categories. 
 • Bulk buyers 
 • Small buyers 
