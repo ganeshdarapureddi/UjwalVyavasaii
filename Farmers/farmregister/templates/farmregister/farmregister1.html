@@ -101,7 +101,6 @@
                         <div class="location_icon_bottum_tt">
                             <ul>
                                 <li><img src="{%static  'icon/loc1.png' %} " />Lendi Vizianagaram</li>
-                                
                                 <li><img src="{% static 'icon/call1.png'  %}"/>+91 8688233374</li>
                             </ul>
                         </div>
@@ -117,7 +116,7 @@
                                             <ul class="menu-area-main">
                                                 <li class="active"> <a href="/home/">Home</a> </li>
                                                 
-                                                <li><a href="/contact/">Contact Us</a></li>
+                                                <li><a href="#contact">Contact Us</a></li>
 
                                             </ul>
                                         </nav>
@@ -142,11 +141,11 @@
                   
                     <div class="my-4">
     
-                        <form action=" " method="POST">{% csrf_token %}
+                        <form action=" " method="POST">
+                            {% csrf_token %}
     
                             <div class="row mt-5 align-items-center">
                                 <div class="col-md-3 text-center mb-1">
-                                <div>
                                     <div>
                                     <!-- image insertion -->
                                     <div class="avatar avatar-xl" >
@@ -188,11 +187,11 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCompany5">Phone number</label>
-                                    <input type="text" class="form-control" id="inputnumber" >
+                                    <input type="text" class="form-control" name="phone" pattern="[6789][0-9]{9}" id="inputnumber" >
                                          
     
                                 </div>
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-3">
                                     <label for="inputZip5">Pin code</label>
                                     <input type="text" class="form-control" id="inputZip5" name="pinCode" placeholder="Enter pincode" required/>
                                 </div>
@@ -207,7 +206,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPassword6">Confirm Password</label>
-                                        <input type="password" name="cpassword" class="form-control" id="inputPassword7" required/>
+                                        <input type="password" name="cpassword" class="form-control" id="inputPassword7"  required/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -222,7 +221,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="background-color: rgb(16, 79, 56);"><a href="/login/">REGISTER</a></button>
+                            <button type="submit" class="btn btn-primary" style="background-color: rgb(12, 68, 46);">REGISTER</button>
                         </form>
                     </div>
                     

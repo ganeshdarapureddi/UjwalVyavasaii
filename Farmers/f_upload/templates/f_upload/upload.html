@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  {%load static%}
+{%load static%}
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>farmer upload</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>farmer upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
@@ -35,253 +36,281 @@
     <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-  <style>
-    .card-0 {
-    min-height: 110vh;
-    background: linear-gradient(to right, #8ba09c, #0c6b45);
-    color: rgb(27, 47, 42);
-    border: 0px;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <style>
+        .card-0 {
+            min-height: 110vh;
+            background: linear-gradient(to right, #8ba09c, #0c6b45);
+            color: rgb(27, 47, 42);
+            border: 0px;
+        }
 
-p {
-    font-size: 15px;
-    line-height: 25px !important;
-    font-weight: 500;
-
-
-}
-
-.container {
-    padding-top: 100px !important;
-    border-radius: 20px;
-}
+        p {
+            font-size: 15px;
+            line-height: 25px !important;
+            font-weight: 500;
 
 
+        }
 
-.btn {
-    letter-spacing: 1px;
-}
-
-select:active{
-    box-shadow: none !important;
-    outline-width: 0 !important;
-
-}
-select:after{
-    box-shadow: none !important;
-    outline-width: 0 !important;
-
-}
-input,
-textarea {
-    padding: 10px 12px 10px 12px;
-    border: 1px solid rgb(59, 50, 50);
-    border-radius: 0px !important;
-    margin-bottom: 5px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #1d252d;
-    font-size: 14px;
-    letter-spacing: 1px;
-    resize: none;
-
-}
-
-select:focus,
-input:focus {
-    box-shadow: none !important;
-    border: 1px solid #15624e !important;
-    outline-width: 0 !important;
-    font-weight: 400
-}
-
-label {
-    margin-bottom: 2px;
-    font-weight: bolder;
-    font-size: 14px;
-}
-
-input:focus,
-textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #132b1c;
-    outline-width: 0
-}
-
-button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline-width: 0
-}
-
-.form-control {
-    height: calc(2em + .75rem + 3px);
-}
-
-.inner-card {
-    margin: 79px 0px 70px 0px;
-}
-
-.card-0 {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.card-1 {
-    border-radius: 17px;
-    color: black;
-    box-shadow: 2px 4px 15px 0px rgb(0, 0, 0 , 0.5) !important;
-}
-
-#file {
-    border: 2px dashed #125157 !important;
-
-}
-
-.color input {
-    background-color: #242c27;
-}
-
-.files:before {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    width: 100%;
-    content: attr(data-before);
-    color: #000;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: center;
-}
+        .container {
+            padding-top: 100px !important;
+            border-radius: 20px;
+        }
 
 
-#file {
-    display: inline-block;
-    width: 100%;
-    padding: 95px 0 0 100%;
-    background: url('https://i.imgur.com/VXWKoBD.png') top center no-repeat #fbf9f9;
-    background-size: 55px 55px;
-}
 
-  </style>
+        .btn {
+            letter-spacing: 1px;
+        }
+
+        select:active {
+            box-shadow: none !important;
+            outline-width: 0 !important;
+
+        }
+
+        select:after {
+            box-shadow: none !important;
+            outline-width: 0 !important;
+
+        }
+
+        input,
+        textarea {
+            padding: 10px 12px 10px 12px;
+            border: 1px solid rgb(59, 50, 50);
+            border-radius: 0px !important;
+            margin-bottom: 5px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #1d252d;
+            font-size: 14px;
+            letter-spacing: 1px;
+            resize: none;
+
+        }
+
+        select:focus,
+        input:focus {
+            box-shadow: none !important;
+            border: 1px solid #15624e !important;
+            outline-width: 0 !important;
+            font-weight: 400
+        }
+
+        label {
+            margin-bottom: 2px;
+            font-weight: bolder;
+            font-size: 14px;
+        }
+
+        input:focus,
+        textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #132b1c;
+            outline-width: 0
+        }
+
+        button:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline-width: 0
+        }
+
+        .form-control {
+            height: calc(2em + .75rem + 3px);
+        }
+
+        .inner-card {
+            margin: 79px 0px 70px 0px;
+        }
+
+        .card-0 {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .card-1 {
+            border-radius: 17px;
+            color: black;
+            box-shadow: 2px 4px 15px 0px rgb(0, 0, 0, 0.5) !important;
+        }
+
+        #file {
+            border: 2px dashed #125157 !important;
+
+        }
+
+        .color input {
+            background-color: #242c27;
+        }
+
+        .files:before {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            width: 100%;
+            content: attr(data-before);
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+
+        #file {
+            display: inline-block;
+            width: 100%;
+            padding: 95px 0 0 100%;
+            background: url('https://i.imgur.com/VXWKoBD.png') top center no-repeat #fbf9f9;
+            background-size: 55px 55px;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <!-- header inner -->
-    <div class="header">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
-                    <div class="full">
-                        <div class="center-desk">
-                            <div class="logo">
-                                <a href="index.html"><img src="{% static 'icon/logo1.jpg' %}" alt="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                    <div class="location_icon_bottum_tt">
-                        <ul>
-                            <li><img src="{%static  'icon/loc1.png' %} " />Lendi Vizianagaram</li>
-                            
-                            <li><img src="{% static 'icon/call1.png'  %}"/>+91 8688233334</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 location_icon_bottum">
-                   <div class="row">
-                        <div class="col-md-8 ">
-                            <div class="menu-area">
-                                <div class="limit-box">
-                                    <nav class="main-menu">
-                                        <ul class="menu-area-main">
-                                            <li class="active"> <a href="/farmerpage/">Home</a> </li>
-                                            <li> <a href="/farmorder/">Orders</a> </li>
-                                            <li><a href="/f_account/">Account</a></li>
-                                            
-                                            <li><a href="/contact/">Contact Us</a></li>
-
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                            <form class="search">
-                                <input class="form-control" type="text" placeholder="Search">
-                                <button><img src="{% static 'images/search_icon.png' %}"></button>
-                            </form>
-                        </div>
-                   </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end header inner -->
-</header>
-  <div class="container card-0 justify-content-center ">
-    <div class="card-body px-sm-4 px-0">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-10 col"><h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">Upload Photos</h3><p class="mt-md-4  ml-md-0 ml-2 text-center text-sm-left"> Upload the photos of the products to be sold or the fields to prebook the slots</p></div>
-        </div>
-        <div class="row justify-content-center round">
-            <div class="col-lg-10 col-md-12 ">
-                <div class="card shadow-lg card-1">
-                    <div class="card-body inner-card">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-5 col-md-6 col-sm-12">
-                                <div class="form-group"><label for="first-name">FullName</label><input type="text" class="form-control" id="first-name" placeholder="Enter your Name"> </div>
-                                <div class="form-group"> <label for="Mobile-Number">Mobile Number</label> <input type="text" class="form-control" id="Mobile-Number" placeholder="Enter Mobile Number"> </div>
-                                
-                                <div class="form-group"> <label for="time">Email</label> <input type="email" class="form-control" id="time" placeholder="Enter your Email">  </div>
-                                
-                            </div>
-                            <div class="col-lg-5 col-md-6 col-sm-12">
-                                
-                                <div class="form-group"> <label for="phone">Product Name</label>  <input type="text" class="form-control" id="email" placeholder="Enter Product Name"> </div>
-                                <div class="form-group"> <label for="Evaluate Budget">Price</label> <input type="text" class="form-control" id="Evaluate Budget" placeholder="Enter Product Price"> </div>
-                                <div class="form-group"> <label for="Company-Name">Pincode</label> <input type="text" class="form-control" id="Company-Name" placeholder="Enter Pincode"> </div>
-                                
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 col-lg-10 col-12"> <div class="form-group files"><label class="my-auto">Upload Your photo here </label> <input id="file" type="file" class="form-control" /></div></div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 col-lg-10 col-12"><div class="form-group"> </div>
-                                <div class="row justify-content-end mb-5">
-                                    <div class="col-lg-4 col-auto "><button type="button" class="btn btn-primary btn-block" style="color:#0c6b45"><small class="font-weight-bold"><a href="/farmerpage/">Submit</a></small></button> </div>
+    <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="index.html"><img src="{% static 'icon/logo1.jpg' %}" alt="#"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="location_icon_bottum_tt">
+                            <ul>
+                                <li><img src="{%static  'icon/loc1.png' %} " />Lendi Vizianagaram</li>
+
+                                <li><img src="{% static 'icon/call1.png'  %}" />+91 8688233374</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 location_icon_bottum">
+                        <div class="row">
+                            <div class="col-md-8 ">
+                                <div class="menu-area">
+                                    <div class="limit-box">
+                                        <nav class="main-menu">
+                                            <ul class="menu-area-main">
+                                                <li class="active"> <a href="/farmerpage/">Home</a> </li>
+                                                <li> <a href="/farmorder/">Orders</a> </li>
+                                                <li><a href="/f_account/">Account</a></li>
+
+                                                <li><a href="/contact/">Contact Us</a></li>
+
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <form class="search">
+                                    <input class="form-control" type="text" placeholder="Search">
+                                    <button><img src="{% static 'images/search_icon.png' %}"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<script>
-$(document).ready(function(){
-  $(".files").attr('data-before',"Drag file here or click the above button");
-  $('input[type="file"]').change(function(e){
-      var fileName = e.target.files[0].name; 
-      $(".files").attr('data-before',fileName);
-  
-  });
-});
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- end header inner -->
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="container card-0 justify-content-center ">
+                <div class="card-body px-sm-4 px-0">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-10 col">
+                            <h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">Upload Photos</h3>
+                            <p class="mt-md-4  ml-md-0 ml-2 text-center text-sm-left"> Upload the photos of the products
+                                to be sold or the fields to prebook the slots</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center round">
+                        <div class="col-lg-10 col-md-12 ">
+                            <div class="card shadow-lg card-1">
+                                <div class="card-body inner-card">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-md-6 col-sm-12">
+                                            <div class="form-group"><label for="first-name">Product Name</label><input
+                                                    type="text" class="form-control" id="first-name" name="pname"
+                                                    placeholder="Enter Product Name"> </div>
+
+                                        </div>
+                                        <div class="col-lg-5 col-md-6 col-sm-12">
+
+                                            <div class="form-group"> <label for="phone">Max Quantity</label> <input
+                                                    type="text" class="form-control" name="quantity" id="email"
+                                                    placeholder="Enter Quantity"> </div>
+                                            <div class="form-group"> <label for="Evaluate Budget">Price</label> <input
+                                                    type="text" class="form-control" id="Evaluate Budget" name="price"
+                                                    placeholder="Enter Product Price"> </div>
+                                            <div class="form-group"> <label for="Company-Name">Time</label> <input
+                                                    type="text" class="form-control" id="Company-Name" name="time"
+                                                    placeholder="Enter time"> </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-12 col-lg-10 col-12">
+                                            <div class="form-group files"><label class="my-auto">Upload Your photo here
+                                                </label> <input id="file" type="file" name="pimg"
+                                                    class="form-control" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-12 col-lg-10 col-12">
+                                            <div class="form-group"> </div>
+                                            <div class="row justify-content-end mb-5">
+                                                <div class="col-lg-2 col-auto ">
+                                                    <button type="submit" class="btn btn-primary"
+                                                        style="background-color: rgb(12, 68, 46);">
+                                                        <small class="font-weight-bold">
+                                                            <a href="/farmerpage/">Submit</a>
+                                                        </small>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+            <script>
+                $(document).ready(function () {
+                    $(".files").attr('data-before', "Drag file here or click the above button");
+                    $('input[type="file"]').change(function (e) {
+                        var fileName = e.target.files[0].name;
+                        $(".files").attr('data-before', fileName);
+
+                    });
+                });
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
+
 </html>
