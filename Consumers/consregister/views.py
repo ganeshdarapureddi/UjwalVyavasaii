@@ -13,13 +13,13 @@ def funroute3(request):
         pinCode=request.POST.get('pinCode','')
         password=request.POST.get('password','')
         cpassword=request.POST.get('cpassword','')
-        pimg=request.POST.get('pimg','')
-        print(name,email,adress,phone,pinCode,password)
+        pimg=request.POST.get('pimg')
         if password==cpassword:
             my_user=User.objects.create_user(name,email,password)
             my_user.save()
             reg =Register(name=name,email=email,adress=adress,phone=phone,pinCode=pinCode,password=password,pimg=pimg,typ='customer')
             reg.save()
+            return HttpResponse("<h1>Registered successfully! now login to your account</h1><br><a style='color: green;' href='/login'>return to login</a>")
         else:
             return HttpResponse("check password and confirm password")
     return render(request,'consregister/consregister11.html')

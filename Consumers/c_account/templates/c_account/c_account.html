@@ -143,12 +143,12 @@
                 <div class="col-12 col-lg-10 col-xl-8 mx-auto">
     
                     <div class="my-4">
-                        <form>
+                        <form action="" method="POST">{% csrf_token %}
                             <div class="row mt-5 align-items-center">
                                 <div class="col-md-3 text-center mb-1">
                                     <!-- image insertion -->
                                     <div class="avatar avatar-xl" >
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="..."
+                                        <img src="{{MEDIA_URL}}{{ account.0.pimg }}" alt="..."
                                             class="avatar-img rounded-circle" />
                                     </div>
                                     <!-- edit image -->
@@ -159,44 +159,49 @@
                             <hr class="my-4" />
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="Fullname">Full name</label>
-                                    <input type="text" id="name" class="form-control" placeholder="name" />
+                                    <label for="Fullname">Full name(cannot edit after account creation)</label>
+                                    <input type="text" id="name" class="form-control" value="{{account.0.name}}" disabled />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="email" disabled />
+                                <label for="inputEmail4">Email(cannot edit after account creation)</label>
+                                <input type="email" class="form-control" id="email" name="email" value="{{account.0.email}}" disabled />
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress5">Address</label>
-                                <input type="text" class="form-control" id="inputAddress5"
-                                    placeholder="P.O. Box 464, 5975 Eget Avenue" />
+                                <input type="text" class="form-control" id="adress" name="adress"
+                                value="{{account.0.adress}}" />
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputCompany5">Phone number</label>
-                                    <input type="text" class="form-control" id="inputnumber"
-                                        placeholder="1234567890" />
+                                    <label for="inputCompany5">Phone number(cannot edit after account creation)</label>
+                                    <input type="text" class="form-control" id="phone" name="phone" disabled
+                                    value="{{account.0.phone}}"  />
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputZip5">Pin code</label>
-                                    <input type="text" class="form-control" id="inputZip5" placeholder="98232" />
+                                    <input type="text" class="form-control" id="pincode" name="pincode"
+                                    value="{{account.0.pinCode}}"/>
                                 </div>
                             </div>
                             <hr class="my-4" />
                             <div class="row mb-4">
                                 <div class="col-md-6">
+                                    <label for="inputPassword4">Follow below to change password?</label>
                                     <div class="form-group">
                                         <label for="inputPassword4">Old Password</label>
-                                        <input type="password" class="form-control" id="inputPassword5" />
+                                        <input type="password" class="form-control" id="oldpass" 
+                                        name="oldpass"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPassword5">New Password</label>
-                                        <input type="password" class="form-control" id="inputPassword6" />
+                                        <input type="password" class="form-control" id="new1pass" 
+                                        name="new1pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPassword6">Confirm Password</label>
-                                        <input type="password" class="form-control" id="inputPassword7" />
+                                        <input type="password" class="form-control" id="new2pass" 
+                                        name="new2pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -211,7 +216,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="background-color: rgb(13, 57, 13);"><a href="/consumerpage/" style="color:whitesmoke">Save Changes</a></button>
+                            <input type="submit" class="btn btn-primary" style="background-color: rgb(13, 57, 13);"><a href="" style="color:whitesmoke">Save Changes</a>
                         </form>
                     </div>
                 </div>
@@ -223,8 +228,18 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
+        var password = document.getElementById("password")
+            , confirm_password = document.getElementById("confirm_password");
 
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
     </script>
 </body>
-
-</html>
