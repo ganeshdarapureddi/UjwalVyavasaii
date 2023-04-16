@@ -23,7 +23,7 @@ def funroute3(request):
             my_user.save()
             reg =Register(name=name,email=email,adress=adress,phone=phone,pinCode=pinCode,password=password,pimg=pimg,cimg=cimg,fimg=fimg,typ='farmer')
             reg.save()
-            return HttpResponse("<h1>Registered successfully!</h1><br><a style='color: green;' href='/farmerpage'>return to Dashboard</a>")
+            return HttpResponse("<h1>Registered successfully! now login to your account</h1><br><a style='color: green;' href='/login'>return to login</a>")
         else:
             return HttpResponse("check password and confirm password")
     return render(request,'farmregister/farmregister1.html')

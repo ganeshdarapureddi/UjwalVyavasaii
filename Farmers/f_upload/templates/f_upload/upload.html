@@ -257,13 +257,13 @@
 
                                             <div class="form-group"> <label for="phone">Max Quantity</label> <input
                                                     type="text" class="form-control" name="quantity" id="email"
-                                                    placeholder="Enter Quantity"> </div>
+                                                    placeholder="Enter Quantity only in digits" pattern="\d*" > </div>
                                             <div class="form-group"> <label for="Evaluate Budget">Price</label> <input
                                                     type="text" class="form-control" id="Evaluate Budget" name="price"
-                                                    placeholder="Enter Product Price"> </div>
-                                            <div class="form-group"> <label for="Company-Name">Time</label> <input
-                                                    type="text" class="form-control" id="Company-Name" name="time"
-                                                    placeholder="Enter time"> </div>
+                                                    placeholder="Enter Product Price only digits" pattern="\d*"> </div>
+                                            <div class="form-group"> <label for="Company-Name">Date</label> <input
+                                             class="form-control" id="Company-Name" name="time" type="date"
+                                                 min="2023-04-16" max="2024-06-31" placeholder="Enter Date" > </div>
 
                                         </div>
                                     </div>
@@ -271,7 +271,7 @@
                                     <div class="row justify-content-center">
                                         <div class="col-md-12 col-lg-10 col-12">
                                             <div class="form-group files"><label class="my-auto">Upload Your photo here
-                                                </label> <input id="file" type="file" name="pimg"
+                                                </label> <input type="file" id="img"  name="pimg"
                                                     class="form-control" /></div>
                                         </div>
                                     </div>
@@ -282,9 +282,8 @@
                                                 <div class="col-lg-2 col-auto ">
                                                     <button type="submit" class="btn btn-primary"
                                                         style="background-color: rgb(12, 68, 46);">
-                                                        <small class="font-weight-bold">
-                                                            <a href="/farmerpage/">Submit</a>
-                                                        </small>
+                                                            Submit
+                                                        
                                                     </button>
                                                 </div>
                                             </div>

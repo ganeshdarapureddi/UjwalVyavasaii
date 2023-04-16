@@ -150,17 +150,17 @@
                                     <!-- image insertion -->
                                     <div class="avatar avatar-xl" >
                                         <h6 for="img">Select Profile Picture</h6>
-                                        <input type="file" id="img" name="pimg" accept="image/*">
+                                        <input type="file" id="img" name="pimg" accept="image/*" required>
                                         
                                     </div>
                                     <div class="avatar avatar-xl" >
                                         <h6 for="img">Farmer field picture</h6>
-                                        <input type="file" id="img" name="fimg" accept="image/*">
+                                        <input type="file" id="img" name="fimg" accept="image/*" required>
                                         
                                     </div>
                                     <div class="avatar avatar-xl" >
                                         <h6 for="img">Farmer crop Picture</h6>
-                                        <input type="file" id="img" name="cimg" accept="image/*">
+                                        <input type="file" id="img" name="cimg" accept="image/*" required>
                                         
                                     </div>
                                    
@@ -202,11 +202,11 @@
                          
                                     <div class="form-group">
                                         <label for="inputPassword5">Enter Password</label>
-                                        <input type="password" class="form-control" name="password" id="inputPassword6" required/>
+                                        <input type="password" class="form-control" name="password" id="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPassword6">Confirm Password</label>
-                                        <input type="password" name="cpassword" class="form-control" id="inputPassword7"  required/>
+                                        <input type="password" name="cpassword" class="form-control" id="confirm_password"  required/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -235,6 +235,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
 
+    </script>
+    <script type="text/javascript">
+        var password = document.getElementById("password")
+            , confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
     </script>
     </body>
 

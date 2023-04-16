@@ -11,6 +11,7 @@ def f_upload(request):
         time=request.POST.get('time','')
         pimg=request.POST.get('pimg','')
         print(name,price,maxQty)
-        reg =Upload(pName=name,price=price,maxQty=maxQty,dTime=time,pimg=pimg)
+        reg =Upload(pName=name,price=price,maxQty=maxQty,dTime=time,PImage=pimg)
         reg.save()
+        return render(request, './farmerpage/farmerpage.html')
     return render(request,'f_upload/upload.html')
