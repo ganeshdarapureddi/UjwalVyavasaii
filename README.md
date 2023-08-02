@@ -1,28 +1,6 @@
                                                 Ujwal vyavasay
-
 Description: 
 The main aim of the project is to remove the middlemen between the farmer and the consumer (Disintermediation). 
-
-Problem Statement: 
-The farmer gets only 50–70% of what the end consumer pays for the produce. The farmer is the one who puts his blood and sweat for 4 to 6 months to grow the produce, and middlemen take a big piece of the pie just like that. This sounds unfair, and even frustrating at times.
-Presence of Too Many Intermediates/Middlemen results in the exploitation of both farmers and consumers with the middlemen offering lower prices to farmers and charging higher prices from the consumers.The farmers cannot wait for a long time, The farmers are forced to sell the produce to middlemen at low prices as they are at the risk of spoilage of produce.
-
-Problem Solution:
-We have designed a solution for this case on the basis of different analysis and surveys from the farmers and consumers. 
-In order to categorize the buyers of farmers products, we have divided them into two categories. 
-• Bulk buyers 
-• Small buyers 
-Bulk buyers:
-Bulk buyers are the buyers who are in need of products in huge amounts like for hotels and ceremonies. Bulk buyers can directly purchase the product from the farmer by using the app interface
-Small Buyers:
-These are the buyers who buy the product in a small amount like households and other common people. Every small buyer cannot directly go to the farmer which costs more for them. Here we come up with the idea of formation of community. 
-Community: 
-Community system is where the people divided on basis of their postal code and number of active user on the postal code area.Every consumer in this community will be displayed with the same farmers producing different products in nearest to their location, this helps to fast and cost saving delivery to them from farmers.  
-There are two types of products produced by Farmers they are
-• Long term products 
-• Short term products
-Long term products are handled in the span of days and months depending on the product. Examples of long term products are Rice, Wheat, Oats, Paddy, mangoes, coconut etc.
-Short term Products are handles in the span of hours and days depending on the product Examples of short term products are green leafy vegetables, fruits etc
 
 Features and Modules in the project:
 There are various modules in the project whic we have used they are
